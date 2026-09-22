@@ -1,0 +1,54 @@
+:root {
+  /* Brand Color Palette */
+  --navy-deep: #071B4B;
+  --navy-dark: #040F2B;
+  --navy-light: #0E296C;
+  --blue-primary: #0878F9;
+  --blue-hover: #0660CA;
+  --cyan-bright: #11C5F4;
+  --purple-accent: #6337E8;
+  --purple-hover: #5027D1;
+  
+  /* Neutral Palette */
+  --bg-light: #F7F9FC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #EEF3FA;
+  --border-color: rgba(7, 27, 75, 0.08);
+  --border-highlight: rgba(17, 197, 244, 0.3);
+  
+  /* Typography Colors */
+  --text-main: #071B4B;
+  --text-muted: #536485;
+  --text-light: #8A99B5;
+  --text-white: #FFFFFF;
+  
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #11C5F4 0%, #0878F9 50%, #6337E8 100%);
+  --gradient-text: linear-gradient(135deg, #071B4B 0%, #0878F9 60%, #6337E8 100%);
+  --gradient-card-border: linear-gradient(135deg, rgba(17, 197, 244, 0.4), rgba(99, 55, 232, 0.4));
+  --gradient-glow: linear-gradient(135deg, rgba(17, 197, 244, 0.12) 0%, rgba(8, 120, 249, 0.08) 50%, rgba(99, 55, 232, 0.12) 100%);
+  --gradient-hero-bg: radial-gradient(circle at 80% 20%, rgba(17, 197, 244, 0.08) 0%, rgba(99, 55, 232, 0.05) 40%, rgba(247, 249, 252, 0) 70%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(7, 27, 75, 0.04);
+  --shadow-md: 0 8px 24px rgba(7, 27, 75, 0.06);
+  --shadow-lg: 0 16px 40px rgba(7, 27, 75, 0.08);
+  --shadow-glow: 0 10px 30px rgba(8, 120, 249, 0.2);
+  --shadow-purple-glow: 0 10px 30px rgba(99, 55, 232, 0.2);
+
+  /* Transitions */
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --container-max-width: 1240px;
+  --header-height: 80px;
+}

@@ -1,0 +1,223 @@
+/* CTA Section */
+.cta-banner-section {
+  padding: 5.5rem 0;
+  background: #071B4B;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid rgba(17, 197, 244, 0.15);
+  border-bottom: 1px solid rgba(17, 197, 244, 0.15);
+}
+
+.cta-banner-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-banner-inner h2 {
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.cta-banner-inner p {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  opacity: 0.9;
+  margin-bottom: 2.25rem;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 6rem 0;
+  background: var(--bg-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+}
+
+.contact-info-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info-card h3 {
+  font-size: 1.75rem;
+  color: var(--navy-deep);
+  margin-bottom: 1rem;
+}
+
+.contact-info-card p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-method-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(8, 120, 249, 0.08);
+  border: 1px solid rgba(17, 197, 244, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+  flex-shrink: 0;
+}
+
+.contact-details-text strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--navy-deep);
+  margin-bottom: 0.2rem;
+}
+
+.contact-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+  transition: var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--purple-accent);
+}
+
+/* Form Styling */
+.contact-form-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2.25rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy-deep);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-light);
+  color: var(--navy-deep);
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--blue-primary);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 3px rgba(8, 120, 249, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-notice {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Floating WhatsApp Quick Button */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  z-index: 990;
+  transition: var(--transition-normal);
+}
+
+.floating-wa-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}
