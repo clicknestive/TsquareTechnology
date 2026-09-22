@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Code, Sparkles, Smartphone, BarChart3, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, BarChart3 } from 'lucide-react';
 import { getWhatsAppLink } from '../utils/whatsapp';
 import '../styles/hero.css';
 
@@ -81,23 +81,6 @@ export default function Hero() {
                   <p>SEO, Meta Ads & Digital Growth Strategy</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Floating Micro Badges */}
-          <div className="floating-glass-badge badge-top-left animate-float-delayed">
-            <ShieldCheck size={24} color="#0878F9" />
-            <div className="badge-text">
-              <strong>100% Reliable</strong>
-              <span>Production Quality</span>
-            </div>
-          </div>
-
-          <div className="floating-glass-badge badge-bottom-right animate-float">
-            <Sparkles size={24} color="#11C5F4" />
-            <div className="badge-text">
-              <strong>Complete Digital Agency</strong>
-              <span>Web • Apps • Marketing</span>
             </div>
           </div>
         </div>

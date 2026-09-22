@@ -89,13 +89,13 @@ img, video {
 }
 
 .section-header h2 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.75rem, 5.5vw, 2.75rem);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
 
 .section-header p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
 }
 
@@ -106,6 +106,7 @@ img, video {
   justify-content: center;
   gap: 0.6rem;
   padding: 0.85rem 1.75rem;
+  min-height: 48px;
   font-size: 1rem;
   font-weight: 600;
   border-radius: var(--radius-full);
@@ -175,6 +176,30 @@ img, video {
 
 .animate-float-delayed {
   animation: floatAnimation 7s ease-in-out 2s infinite;
+}
+
+/* Responsive Mobile Layout Adjustments */
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
 }
 
 /* Accessibility */

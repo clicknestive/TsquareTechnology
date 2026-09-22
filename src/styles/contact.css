@@ -146,6 +146,7 @@
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 0.85rem 1rem;
+  min-height: 48px;
   font-size: 0.95rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
@@ -175,38 +176,25 @@
   gap: 0.4rem;
 }
 
-/* Floating WhatsApp Quick Button */
-.floating-wa-btn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #25D366;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-  z-index: 990;
-  transition: var(--transition-normal);
-}
-
-.floating-wa-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
-}
-
 @media (max-width: 992px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .cta-banner-section, .contact-section {
+    padding: 3.5rem 0;
+  }
+
+  .contact-info-card, .contact-form-card {
+    padding: 1.75rem 1.25rem;
+  }
+
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .form-group.full-width {
@@ -215,9 +203,15 @@
 
   .cta-buttons {
     flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cta-buttons .btn {
     width: 100%;
+    min-height: 48px;
+    justify-content: center;
   }
 }

@@ -11,7 +11,6 @@ import Creative from './components/Creative';
 import CTASection from './components/CTASection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import WhatsAppFloat from './components/WhatsAppFloat';
 import './styles/global.css';
 
 export default function App() {
@@ -31,7 +30,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppFloat />
     </div>
   );
 }

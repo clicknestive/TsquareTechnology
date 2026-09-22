@@ -151,6 +151,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.75rem 1.25rem;
+  min-height: 46px;
   border-radius: var(--radius-md);
   font-size: 0.9rem;
   font-weight: 600;
@@ -173,8 +174,28 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 3.5rem 0;
+  }
+
+  .portfolio-filter-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+
   .portfolio-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portfolio-card-body {
+    padding: 1.25rem 1.15rem;
   }
 }

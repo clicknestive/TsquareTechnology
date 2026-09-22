@@ -3,6 +3,14 @@ import { Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
 import { getWhatsAppLink } from '../utils/whatsapp';
 import '../styles/navbar.css';
 
+const InstagramIcon = ({ size = 20, color = "currentColor" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,8 +41,18 @@ export default function Navbar() {
       }
     };
 
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setMobileOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   return (
@@ -64,6 +82,28 @@ export default function Navbar() {
 
           <div className="nav-actions">
             <a
+              href="https://www.instagram.com/tsquaretechnology?stkn=MW5rdWFzZzB6ODk2bw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-social-btn nav-instagram"
+              aria-label="Open T Square Technology Instagram"
+              title="Open T Square Technology Instagram"
+            >
+              <InstagramIcon size={20} />
+            </a>
+
+            <a
+              href="https://wa.me/917795193686"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-social-btn nav-whatsapp"
+              aria-label="Chat with T Square Technology on WhatsApp"
+              title="Chat with T Square Technology on WhatsApp"
+            >
+              <MessageCircle size={20} />
+            </a>
+
+            <a
               href={getWhatsAppLink('917795193686', 'Hello T Square Technology, I would like to discuss a project with your team.')}
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +116,7 @@ export default function Navbar() {
             <button
               className="mobile-toggle"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle Menu"
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -113,6 +153,29 @@ export default function Navbar() {
         </ul>
 
         <div className="drawer-footer">
+          <div className="drawer-social-row">
+            <a
+              href="https://www.instagram.com/tsquaretechnology?stkn=MW5rdWFzZzB6ODk2bw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-social-btn nav-instagram"
+              aria-label="Open T Square Technology Instagram"
+              title="Open T Square Technology Instagram"
+            >
+              <InstagramIcon size={20} />
+            </a>
+            <a
+              href="https://wa.me/917795193686"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-social-btn nav-whatsapp"
+              aria-label="Chat with T Square Technology on WhatsApp"
+              title="Chat with T Square Technology on WhatsApp"
+            >
+              <MessageCircle size={20} />
+            </a>
+          </div>
+
           <a
             href={getWhatsAppLink('917795193686', 'Hello T Square Technology, I would like to start a project.')}
             target="_blank"
